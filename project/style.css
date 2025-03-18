@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif; 
+    height: 100vh; /* This sets the minimum height of the view to full screen */
+    overflow: hidden; /* Prevents scrolling to ensure everything fits on one page */
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;  /* Center items horizontally in the container */
+    justify-content: flex-start;  
+    color: rgb(7, 64, 29);
+    text-align: center;
+    padding: 5%; /* Padding top*/
+}
+
+.header-content {
+    margin-top: 10%; /* Adjust this percentage to position the content lower */
+}
+
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;  /* Center navbar items horizontally */
+    flex-wrap: wrap;  /* Allow items to wrap in smaller screens */
+}
+
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container without losing aspect ratio */
+    z-index: -1; /* Place the image behind the content */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    background: rgba(0, 128, 0, 0.8); 
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 0; 
+}
+
+
+.navbar ul li {
+    display: inline-block; 
+    margin-right: 10px; 
+    padding-left: 10px; 
+}
+
+.navbar ul li {
+    padding: 10px 15px; /* Vertical and horizontal padding for navbar items */
+}
+
+.navbar ul li a {
+    color: rgb(8, 49, 20);
+    text-decoration: none;
+    padding: 10px 20px; /* Padding for better click area and appearance */
+    display: inline-block;
+}
+
+.navbar .search input {
+    padding: 5px;
+    margin-top: 5px; /* Adjust vertical alignment if necessary */
+    border: none; 
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white for input */
+}
+
+
+.header-content {
+    position: relative; 
+    z-index: 2;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+}
+
+.header-content p {
+    font-size: 1.5em;
+}
+
+.buttons {
+    margin-top: 20px; 
+}
+
+.buttons a {
+    text-decoration: none; /* Removes underline from links */
+}
+
+.buttons button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 15px 30px; 
+    border-radius: 25px; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    border: none; 
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.buttons button:hover {
+    background-color: #367c39; 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+    transform: translateY(-2px); 
+}
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Adjustments for tablets */
+    header {
+        padding-top: 15%; 
+        height: 90vh; 
+    }
+
+    header .header-content h1 {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+
+    header .header-content p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) { /* Adjustments for mobile phones */
+    header {
+        padding-top: 20%;
+        height: 80vh; 
+    }
+
+    header .header-content h1 {
+        font-size: 1.5em; 
+    }
+
+    header .header-content p {
+        font-size: 1em;
+    }
+}
+
