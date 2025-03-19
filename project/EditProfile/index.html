@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="icon" href="https://em-content.zobj.net/source/apple/391/pencil_270f-fe0f.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <span class="app-name">Emissions Tracker</span>
+        <button class="signout-btn" onclick="signOut()">⏻ Sign Out</button>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-pic" id="profilePicContainer">
+            <img id="profilePic" src="https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg" alt="">
+        </div>
+
+        <label for="uploadImage" class="custom-file-upload">Change Profile Picture</label>
+        <input type="file" id="uploadImage" accept="image/*" hidden>
+
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number (Optional)">
+        
+        <div class="input-group">
+            <input type="date" id="birthdate" name="birthdate" required>
+            <label for="birthdate">Birthdate</label>
+        </div>
+
+        <button onclick="showToast('Profile updated successfully!')">Save Profile</button>
+    </div>
+   
+
+    <div id="toast" class="toast"></div>
+    
+    <div id="image-crop-container">
+        <h3>Crop Your Profile Picture</h3>
+        <img id="crop-image">
+        <br>
+        <button id="crop-btn">Crop & Set</button>
+    </div>
+</body>
+</html>
